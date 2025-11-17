@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Sederhana</title>
+    
+    <style>
+        /* Pengaturan dasar untuk seluruh halaman */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9; /* Warna latar belakang */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center; /* Posisikan konten di tengah horizontal */
+            align-items: center; /* Posisikan konten di tengah vertikal */
+            min-height: 100vh; /* Pastikan tinggi minimum setinggi viewport */
+        }
+
+        /* Kontainer utama untuk membatasi lebar konten */
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+            width: 90%;
+            max-width: 400px; /* Lebar maksimum kontainer */
+            text-align: center;
+        }
+
+        /* Styling untuk Foto Profil */
+        .profile-photo {
+            width: 150px; /* Ukuran foto */
+            height: 150px;
+            border-radius: 50%; /* Membuat foto menjadi lingkaran */
+            object-fit: cover;
+            border: 5px solid #28a745; /* Garis tepi hijau */
+            margin-bottom: 20px;
+        }
+
+        /* Styling untuk judul dan subjudul */
+        .main-title {
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        /* Styling untuk daftar nama */
+        .names-section ul {
+            list-style: none; /* Menghilangkan bullet point */
+            padding: 0;
+            margin: 0;
+        }
+
+        .names-section li {
+            background-color: #e2f0d9; /* Warna latar belakang item daftar (hijau muda) */
+            color: #28a745;
+            padding: 10px;
+            margin-bottom: 8px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .names-section li:hover {
+            background-color: #d4e8c9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile-section">
+            <img src="ber3.png" alt="Foto Profil" class="profile-photo">
+        </div>
+
+        <div class="names-section">
+            <h1 class="main-title">👋 Profil Anggota Tim</h1>
+            <ul>
+                <li>Muhammad Faizal Wahyudi</li>
+                <li>Rafif Aki Rachman</li>
+                <li>Aktar Faizil</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
