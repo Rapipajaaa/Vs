@@ -4,90 +4,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Komputasi awan</title>
-    
+
     <style>
-        /* Pengaturan dasar untuk seluruh halaman */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f9; /* Warna latar belakang */
+            background-color: #f4f4f9;
             margin: 0;
             padding: 0;
             display: flex;
-            justify-content: center; /* Posisikan konten di tengah horizontal */
-            align-items: center; /* Posisikan konten di tengah vertikal */
-            min-height: 100vh; /* Pastikan tinggi minimum setinggi viewport */
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
 
-        /* Kontainer utama untuk membatasi lebar konten */
         .container {
             background-color: #ffffff;
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             width: 90%;
-            max-width: 400px; /* Lebar maksimum kontainer */
+            max-width: 400px;
             text-align: center;
         }
 
-        /* Styling untuk Foto Profil */
         .profile-photo {
-            width: 150px; /* Ukuran foto */
+            width: 150px;
             height: 150px;
-            border-radius: 50%; /* Membuat foto menjadi lingkaran */
+            border-radius: 50%;
             object-fit: cover;
-            border: 5px solid #28a745; /* Garis tepi hijau */
+            border: 5px solid #28a745;
             margin-bottom: 20px;
         }
 
-        /* Styling untuk judul dan subjudul */
-        .main-title {
-            color: #333;
-            margin-bottom: 5px;
-        }
-
-        .subtitle {
-            color: #666;
-            margin-top: 0;
-            margin-bottom: 15px;
-            font-style: italic;
-        }
-
-        /* Styling untuk daftar nama */
         .names-section ul {
-            list-style: none; /* Menghilangkan bullet point */
+            list-style: none;
             padding: 0;
             margin: 0;
         }
 
         .names-section li {
-            background-color: #e2f0d9; /* Warna latar belakang item daftar (hijau muda) */
+            background-color: #e2f0d9;
             color: #28a745;
             padding: 10px;
             margin-bottom: 8px;
             border-radius: 5px;
             font-weight: bold;
+            cursor: pointer;
             transition: background-color 0.3s;
         }
 
         .names-section li:hover {
             background-color: #d4e8c9;
         }
+
+        /* Drop-down NIM */
+        .nim-box {
+            display: none;
+            background-color: #f9fff5;
+            border-left: 4px solid #28a745;
+            padding: 8px 12px;
+            margin-top: 5px;
+            border-radius: 5px;
+            color: #333;
+            font-weight: normal;
+        }
     </style>
 </head>
 <body>
+
     <div class="container">
+
         <div class="profile-section">
             <img src="ber3.png" alt="Foto Profil" class="profile-photo">
         </div>
 
         <div class="names-section">
             <h1 class="main-title">👋 Profil Anggota Tim</h1>
+
             <ul>
-                <li>Muhammad Faizal Wahyudi</li>
-                <li>Rafif Ali Rachman</li>
-                <li>Aktar Faizil</li>
+                <li onclick="toggleNIM('nim1')">Muhammad Faizal Wahyudi</li>
+                <div id="nim1" class="nim-box">NIM: 2312500404</div>
+
+                <li onclick="toggleNIM('nim2')">Rafif Ali Rachman</li>
+                <div id="nim2" class="nim-box">NIM: 2312500602</div>
+
+                <li onclick="toggleNIM('nim3')">Aktar Faizil</li>
+                <div id="nim3" class="nim-box">NIM: 2312500727</div>
             </ul>
         </div>
+
     </div>
+
+    <script>
+        function toggleNIM(id) {
+            const box = document.getElementById(id);
+
+            if (box.style.display === "none" || box.style.display === "") {
+                box.style.display = "block";
+            } else {
+                box.style.display = "none";
+            }
+        }
+    </script>
+
 </body>
 </html>
